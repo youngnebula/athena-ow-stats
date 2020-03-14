@@ -9,8 +9,7 @@ class Player:
         self.region = region
         self.battletag = battletag
         # grabs profile
-        response = requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/profile")
-        self.data = json.loads(response.text)
+        self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/profile").text)
 
 
     def get_name(self):
