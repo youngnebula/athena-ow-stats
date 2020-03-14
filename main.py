@@ -9,28 +9,34 @@ class Player:
         self.region = region
         self.battletag = battletag
         # grabs profile
-        self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/profile").text)
+        self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/complete").text)
 
+
+    #########
+    # BASIC #
+    #########
 
     def get_name(self):
         return self.data['name']
 
-
     def get_total_level(self):
         return str(self.data['prestige']) + str(self.data['level'])
+        
+    def get_games_won(self):
+        return self.data['gamesWon']
 
-
-    def get_rating(self):
-        return self.data['rating']
-
-
+    #################
+    # COMPETETITIVE #
+    #################
+    
     def get_loss(self):
         return int(self.data['competitiveStats']['games']['played']) - int(self.data['competitiveStats']['games']['won'])
-
-
+        
     def get_win(self):
         return self.data['competitiveStats']['games']['won']
-
+        
+    def get_rating(self):
+        return self.data['rating']
 
     def get_rank(self):
         rating = self.data['rating']
@@ -50,6 +56,11 @@ class Player:
             rank = "Grandmaster"
         return rank
 
+    def display_all_ratings(self):
+        for r in self.data['ratings']:
+            print(r['role'], '-', r['level'])
+
+
 
 if __name__ == "__main__":
     player = Player("pc", "us", "pulsar-11413")
@@ -58,7 +69,7 @@ if __name__ == "__main__":
     print('Rating: ', player.get_rating(), '-', player.get_rank())
     print('Losses: ', player.get_loss())
     print('Wins: ', player.get_win())    
-
+    player.display_all_ratings()
 
 
 
