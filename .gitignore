@@ -131,3 +131,6 @@ dmypy.json
 #github 
 .github/
 _config.yml
+
+# vscode
+.vscode/
