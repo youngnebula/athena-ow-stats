@@ -1,6 +1,7 @@
 from player import Player
 
 
+
 def main():
     # Init and data retrieval.
     player1 = Player("pc", "us", "pulsar-11413")
@@ -9,7 +10,6 @@ def main():
     # Basic Outputs
     print('Name: ', player1.get_name())
     print('Level: ', player1.get_total_level())
-    print('Rating: ', player1.get_rating(), '-', player1.get_rank())
     print('Losses: ', player1.get_loss())
     print('Wins: ', player1.get_win())    
     player1.display_all_ratings()
