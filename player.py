@@ -1,6 +1,6 @@
 import requests
 import json
-
+from jsondiff import diff
 
 class Player:
 
@@ -9,7 +9,7 @@ class Player:
         self.region = region
         self.battletag = battletag
         # grabs profile
-        self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/complete").text)
+        self.data = {} 
 
 
     #########
@@ -61,9 +61,18 @@ class Player:
             print(r['role'], '-', r['level'])
 
 
+    ##################
+    # DATA FUNCTIONS #
+    ##################
 
+    def save_data(self):
+        with open('player_data.json', 'w') as f:
+            json.dump(self.data, f, sort_keys=True, indent=4)
 
+    def retrieve_data(self):
+        self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/complete").text) 
 
-
-
-
+    def compare_data(self):
+        with open('player_data.json', 'r') as f:
+            older_data = json.load(f)
+        print(diff(self.data, older_data)) 

@@ -134,3 +134,6 @@ _config.yml
 
 # vscode
 .vscode/
+
+# Config files
+player_data.json
