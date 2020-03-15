@@ -2,14 +2,17 @@ from player import Player
 
 
 def main():
+    # Init and data retrieval.
+    player1 = Player("pc", "us", "pulsar-11413")
+    player1.retrieve_data()
 
-    player = Player("pc", "us", "pulsar-11413")
-    print('Name: ', player.get_name())
-    print('Level: ', player.get_total_level())
-    print('Rating: ', player.get_rating(), '-', player.get_rank())
-    print('Losses: ', player.get_loss())
-    print('Wins: ', player.get_win())    
-    player.display_all_ratings()
+    # Basic Outputs
+    print('Name: ', player1.get_name())
+    print('Level: ', player1.get_total_level())
+    print('Rating: ', player1.get_rating(), '-', player1.get_rank())
+    print('Losses: ', player1.get_loss())
+    print('Wins: ', player1.get_win())    
+    player1.display_all_ratings()
 
 
 
