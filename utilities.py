@@ -1,4 +1,5 @@
 def get_rank(rating):
+    """Returns the rating as a text rank"""
     if rating < 1500:
         rank = "Bronze"
     elif rating in range(1500, 2000):

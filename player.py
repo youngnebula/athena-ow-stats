@@ -13,9 +13,9 @@ class Player:
         self.data = {} 
 
 
-    #########
-    # BASIC #
-    #########
+    ##############
+    # BASIC INFO #
+    ##############
 
     def get_name(self):
         return self.data['name']
@@ -26,9 +26,9 @@ class Player:
     def get_games_won(self):
         return self.data['gamesWon']
 
-    #################
-    # COMPETETITIVE #
-    #################
+    ######################
+    # COMPETETITIVE INFO #
+    ######################
     
     def get_loss(self):
         return int(self.data['competitiveStats']['games']['played']) - int(self.data['competitiveStats']['games']['won'])
@@ -59,4 +59,4 @@ class Player:
     def compare_data(self):
         with open('player_data.json', 'r') as f:
             older_data = json.load(f)
-        print(diff(self.data, older_data)) 
+        print(diff(self.data, older_data))
