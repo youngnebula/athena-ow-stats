@@ -63,9 +63,6 @@ class Player:
         diff_data2 = diff(older_data, self.data)
         print(find_diffs(diff_data1, diff_data2))
 
-    def compare_data(self):
-        pass
-
 
 
 if __name__ == '__main__':
