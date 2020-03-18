@@ -1,3 +1,6 @@
+from jsondiff import diff
+
+
 def get_rank(rating):
     """Returns the rating as a text rank"""
     if rating < 1500:
@@ -17,9 +20,18 @@ def get_rank(rating):
     return rank
 
 
+
+def difference_data(new_data, old_data):
+    
+    post_diff = diff(new_data, old_data)
+    pre_diff = diff(old_data, new_data)
+    return find_diffs(post_diff, pre_diff)
+
 def find_diffs(d1, d2):
     """Finds the difference(subtraction) between two dictionaries"""
     if isinstance(d1, dict) and isinstance(d2, dict):
         return {k: find_diffs(d1.get(k, 0), d2.get(k, 0)) for k in d1 if k in d2}
     else:
         return d1 - d2
+        
+
