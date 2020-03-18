@@ -15,3 +15,11 @@ def get_rank(rating):
     elif rating >= 4000:
         rank = "Grandmaster"
     return rank
+
+
+def find_diffs(d1, d2):
+    """Finds the difference(subtraction) between two dictionaries"""
+    if isinstance(d1, dict) and isinstance(d2, dict):
+        return {k: find_diffs(d1.get(k, 0), d2.get(k, 0)) for k in d1 if k in d2}
+    else:
+        return d1 - d2

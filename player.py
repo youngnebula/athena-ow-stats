@@ -11,7 +11,7 @@ class Player:
         self.region = region
         self.battletag = battletag
         self.data = {} 
-
+        self.diff_data = {}
 
     ##############
     # BASIC INFO #
@@ -56,7 +56,19 @@ class Player:
     def retrieve_data(self):
         self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/complete").text) 
 
-    def compare_data(self):
+    def difference_data(self):
         with open('player_data.json', 'r') as f:
             older_data = json.load(f)
-        print(diff(self.data, older_data))
+        diff_data1 = diff(self.data, older_data)
+        diff_data2 = diff(older_data, self.data)
+        print(find_diffs(diff_data1, diff_data2))
+
+    def compare_data(self):
+        pass
+
+
+
+if __name__ == '__main__':
+    player1 = Player("pc", "us", "pulsar-11413")
+    player1.retrieve_data()
+    player1.difference_data()
