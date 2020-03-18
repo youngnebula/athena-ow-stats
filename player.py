@@ -3,6 +3,19 @@ import json
 from jsondiff import diff
 from utilities import *
 
+hero_list = [
+            'ana', 'ashe', 'baptiste', 'bastion', 
+            'brigitte', 'dva', 'doomfist', 'genji', 
+            'hanzo', 'junkrat', 'lucio', 'mccree', 
+            'mei', 'mercy', 'moira', 'orisa', 
+            'pharah', 'reaper', 'reinhardt', 'roadhog', 
+            'sigma', 'soldier76', 'sombra', 'symmetra', 
+            'torbjorn', 'tracer', 'widowmaker', 'winston', 
+            'wreckingball', 'zarya', 'zenyatta', 
+            ]
+
+
+
 
 class Player:
 
@@ -61,11 +74,20 @@ class Player:
             older_data = json.load(f)
         diff_data1 = diff(self.data, older_data)
         diff_data2 = diff(older_data, self.data)
-        print(find_diffs(diff_data1, diff_data2))
+        return find_diffs(diff_data1, diff_data2)
 
+    def find_heroes_played(self):
+        heroes_played = []
+        with open('player_data.json', 'r') as f:
+            older_data = json.load(f)
+        for heroes in self.data['competitiveStats']['careerStats']:
+            if heroes in hero_list and difference_data(self.data['competitiveStats']['careerStats'][heroes], older_data['competitiveStats']['careerStats'][heroes]):
+               heroes_played.append(heroes) 
+        return heroes_played
 
-
+# Debugging only
+######################################################################################
 if __name__ == '__main__':
     player1 = Player("pc", "us", "pulsar-11413")
     player1.retrieve_data()
-    player1.difference_data()
+    player1.find_heroes_played()
