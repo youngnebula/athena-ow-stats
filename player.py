@@ -4,17 +4,15 @@ from jsondiff import diff
 from utilities import *
 
 hero_list = [
-            'ana', 'ashe', 'baptiste', 'bastion', 
-            'brigitte', 'dva', 'doomfist', 'genji', 
-            'hanzo', 'junkrat', 'lucio', 'mccree', 
-            'mei', 'mercy', 'moira', 'orisa', 
-            'pharah', 'reaper', 'reinhardt', 'roadhog', 
-            'sigma', 'soldier76', 'sombra', 'symmetra', 
-            'torbjorn', 'tracer', 'widowmaker', 'winston', 
-            'wreckingball', 'zarya', 'zenyatta', 
+            'ana', 'ashe', 'baptiste', 'bastion',
+            'brigitte', 'dva', 'doomfist', 'genji',
+            'hanzo', 'junkrat', 'lucio', 'mccree',
+            'mei', 'mercy', 'moira', 'orisa',
+            'pharah', 'reaper', 'reinhardt', 'roadhog',
+            'sigma', 'soldier76', 'sombra', 'symmetra',
+            'torbjorn', 'tracer', 'widowmaker', 'winston',
+            'wreckingball', 'zarya', 'zenyatta',
             ]
-
-
 
 
 class Player:
@@ -23,7 +21,7 @@ class Player:
         self.platform = platform
         self.region = region
         self.battletag = battletag
-        self.data = {} 
+        self.data = {}
         self.diff_data = {}
 
     ##############
@@ -35,20 +33,20 @@ class Player:
 
     def get_total_level(self):
         return str(self.data['prestige']) + str(self.data['level'])
-        
+
     def get_games_won(self):
         return self.data['gamesWon']
 
     ######################
     # COMPETETITIVE INFO #
     ######################
-    
+
     def get_loss(self):
         return int(self.data['competitiveStats']['games']['played']) - int(self.data['competitiveStats']['games']['won'])
-        
+
     def get_win(self):
         return self.data['competitiveStats']['games']['won']
-        
+
     def get_rating(self):
         # Useless
         return self.data['rating']
@@ -56,7 +54,6 @@ class Player:
     def display_all_ratings(self):
         for r in self.data['ratings']:
             print(r['role'].capitalize(), '-', r['level'], '-', get_rank(r['level']))
-
 
     ##################
     # DATA FUNCTIONS #
@@ -82,7 +79,7 @@ class Player:
             older_data = json.load(f)
         for heroes in self.data['competitiveStats']['careerStats']:
             if heroes in hero_list and difference_data(self.data['competitiveStats']['careerStats'][heroes], older_data['competitiveStats']['careerStats'][heroes]):
-               heroes_played.append(heroes) 
+                heroes_played.append(heroes) 
         return heroes_played
 
 # Debugging only
