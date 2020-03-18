@@ -1,6 +1,5 @@
 import requests
 import json
-from jsondiff import diff
 from utilities import *
 
 hero_list = [
@@ -22,7 +21,6 @@ class Player:
         self.region = region
         self.battletag = battletag
         self.data = {}
-        self.diff_data = {}
 
     ##############
     # BASIC INFO #
@@ -66,13 +64,6 @@ class Player:
     def retrieve_data(self):
         self.data = json.loads(requests.get(f"https://ow-api.com/v1/stats/{self.platform}/{self.region}/{self.battletag}/complete").text) 
 
-    def difference_data(self):
-        with open('player_data.json', 'r') as f:
-            older_data = json.load(f)
-        diff_data1 = diff(self.data, older_data)
-        diff_data2 = diff(older_data, self.data)
-        return find_diffs(diff_data1, diff_data2)
-
     def find_heroes_played(self):
         heroes_played = []
         with open('player_data.json', 'r') as f:
@@ -87,4 +78,5 @@ class Player:
 if __name__ == '__main__':
     player1 = Player("pc", "us", "pulsar-11413")
     player1.retrieve_data()
-    player1.find_heroes_played()
+    
+    print(player1.find_heroes_played())
