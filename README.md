@@ -4,9 +4,7 @@ A way to measure your success in Overwatch.
 Inspired by the fallen OVERSUMO app.
 
 # athena-ow-stats
-A way to measure your success in Overwatch.
 
-Inspired by the fallen OVERSUMO app.
 
 <!--
 *** Thanks for checking out this README Template. If you have a suggestion that would
@@ -186,7 +184,7 @@ Project Link: [https://github.com/youngnebula/athena-ow-stats](https://github.co
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/youngnebula/repo.svg?style=flat-square
-[contributors-url]: https://github.com/youngnebula/repo/graphs/contributors
+[contributors-url]: https://github.com/youngnebula/athena-os-stats/repo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/youngnebula/repo.svg?style=flat-square
 [forks-url]: https://github.com/youngnebula/repo/network/members
 [stars-shield]: https://img.shields.io/github/stars/youngnebula/repo.svg?style=flat-square
