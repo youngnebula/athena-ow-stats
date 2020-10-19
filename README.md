@@ -1,55 +1,16 @@
-# athena-ow-stats
-A way to measure your success in Overwatch.
-
-Inspired by the fallen OVERSUMO app.
-
-# athena-ow-stats
-
-
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** youngnebula, athena-ow-stats, , 
--->
-
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/youngnebula/athena-ow-stats">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/misc/img/athena_logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">ATHENA | Overwatch Stats</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    A way to measure your success in Overwatch.
+    <br />
+    Inspired by the fallen OVERSUMO app.
     <br />
     <a href="https://github.com/youngnebula/athena-ow-stats"><strong>Explore the docs »</strong></a>
     <br />
@@ -184,7 +145,7 @@ Project Link: [https://github.com/youngnebula/athena-ow-stats](https://github.co
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/youngnebula/repo.svg?style=flat-square
-[contributors-url]: https://github.com/youngnebula/athena-os-stats/repo/graphs/contributors
+[contributors-url]: https://github.com/youngnebula/repo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/youngnebula/repo.svg?style=flat-square
 [forks-url]: https://github.com/youngnebula/repo/network/members
 [stars-shield]: https://img.shields.io/github/stars/youngnebula/repo.svg?style=flat-square
