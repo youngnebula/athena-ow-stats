@@ -45,18 +45,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`youngnebula`, `athena-ow-stats`, ``, ``
+I wanted to create a Overwatch stat tracking type service similar to Overbuff and mainly Oversumo. After Oversumo dissolved, I wanted to get that same experience once again.
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* Python
+* Requests
+
 
 
 
@@ -68,10 +64,7 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+* Python 3.9
 
 ### Installation
 
@@ -79,25 +72,23 @@ npm install npm@latest -g
 ```sh
 git clone https://github.com/youngnebula/athena-ow-stats.git
 ```
-2. Install NPM packages
+2. Create venv
 ```sh
-npm install
+python3.9 -m venv env
+source env/bin/activate
+pip3 install -r requirements.txt
 ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+3. Run app
+```sh
+python3.9 app.py
+```
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
+* We are only beginning.
 See the [open issues](https://github.com/youngnebula/athena-ow-stats/issues) for a list of proposed features (and known issues).
 
 
@@ -113,30 +104,12 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@](https://twitter.com/) - 
+Your Name - [@](https://twitter.com/tylovejoy) - 
 
 Project Link: [https://github.com/youngnebula/athena-ow-stats](https://github.com/youngnebula/athena-ow-stats)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
 
 
