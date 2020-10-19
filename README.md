@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/youngnebula/athena-ow-stats">
-    <img src="/misc/img/athena_logo.png" alt="Logo" width="80" height="80">
+    <img src="/misc/img/athena_logo.png" alt="Logo" width="250" height="250">
   </a>
 
   <h3 align="center">ATHENA | Overwatch Stats</h3>
