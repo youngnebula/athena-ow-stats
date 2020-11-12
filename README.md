@@ -33,13 +33,8 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -52,9 +47,6 @@ I wanted to create a Overwatch stat tracking type service similar to Overbuff an
 
 * Python
 * Requests
-
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -83,31 +75,10 @@ pip3 install -r requirements.txt
 python3.9 app.py
 ```
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-* We are only beginning.
-See the [open issues](https://github.com/youngnebula/athena-ow-stats/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@](https://twitter.com/tylovejoy) - 
+Your Name - [@tylovejoy](https://twitter.com/tylovejoy) - 
 
 Project Link: [https://github.com/youngnebula/athena-ow-stats](https://github.com/youngnebula/athena-ow-stats)
 
